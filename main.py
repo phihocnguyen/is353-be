@@ -10,13 +10,13 @@ app = FastAPI()
 df = pandas.read_csv("input_time_series_data.csv")
 x = df.iloc[:, 1:25].values
 
-origins = [
+allowed_origins = [
     "https://is353-fe.vercel.app",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
