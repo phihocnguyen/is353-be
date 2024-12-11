@@ -11,7 +11,7 @@ df = pandas.read_csv("input_time_series_data.csv")
 x = df.iloc[:, 1:25].values
 
 origins = [
-    "http://localhost:3000",
+    "https://is353-fe.vercel.app/",
 ]
 
 app.add_middleware(
